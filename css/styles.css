@@ -1,0 +1,262 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p::selection {
+  background-color: rgb(81, 255, 0);
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+input,
+textarea {
+  font-family: inherit;
+}
+ul,
+li {
+  list-style: none;
+}
+.container {
+  width: 80%;
+
+  margin: 0 auto;
+}
+
+/* header-start */
+
+#header {
+  widows: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/spiderman.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+/* nav-start */
+#nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+/* logo */
+.header-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 0;
+  text-transform: capitalize;
+}
+/* menu */
+.menu {
+  display: flex;
+}
+.menu > li {
+  display: flex;
+}
+.menu > li:not(:first-child) {
+  margin-left: 10px;
+}
+.menu > li > a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.menu > li > a > span {
+  position: relative;
+}
+.menu > li > a > span::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+.menu > li > a:hover > span::after {
+  transform: scaleX(1);
+}
+/* nav-end */
+/* header-content */
+.header-content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.header-content > h1 {
+  text-align: center;
+  background-image: linear-gradient(to right, gold, white, gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.header-content > p {
+  margin: 20px 0;
+}
+.header-content > a {
+  color: white;
+  text-decoration: none;
+  background-color: dodgerblue;
+  padding: 15px 25px;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+}
+.header-content > a::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.597);
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+.header-content > a:hover::after {
+  right: -100%;
+  transition: 0.3s;
+}
+.header-content > a > span {
+  z-index: 5;
+}
+/* header-end */
+/* main-start */
+/* main-content */
+.main-content {
+  width: 40%;
+  margin: 50px auto;
+  text-align: center;
+}
+.main-content > h2 {
+  margin: 20px 0;
+  text-transform: capitalize;
+}
+.main-content > p {
+  line-height: 30px;
+  position: relative;
+
+  padding-bottom: 20px;
+}
+.main-content > p::after {
+  content: "";
+  width: 150px;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+/* main-gallery */
+
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery-box {
+  height: 200px;
+  background-color: gold;
+}
+.gallery-box1,
+.gallery-box4 {
+  width: 33%;
+}
+.gallery-box2,
+.gallery-box3 {
+  width: 65%;
+}
+.gallery-box1,
+.gallery-box3 {
+  margin-right: 2%;
+}
+.gallery-box1,
+.gallery-box2 {
+  margin-bottom: 2%;
+}
+.gallery-box1 {
+  background: url(../images/fall.jpg) no-repeat center center;
+  background-size: cover;
+}
+.gallery-box2 {
+  background: url(../images/game01.jpg) no-repeat center center;
+  background-size: cover;
+}
+.gallery-box3 {
+  background: url(../images/game02.jpg) no-repeat center center;
+  background-size: cover;
+}
+.gallery-box4 {
+  background: url(../images/moon.jpg) no-repeat center center;
+  background-size: cover;
+}
+/* main-end */
+.main-end {
+  width: 100%;
+  background-color: #d9d9d9;
+  padding: 10px 0;
+}
+.main-end-items-box {
+  display: flex;
+}
+.main-end-item {
+  text-align: center;
+  width: 32%;
+}
+.main-end-item > i {
+  font-style: normal;
+  color: crimson;
+  font-size: 20px;
+}
+.main-end-item > h3 {
+  margin: 15px 0;
+}
+/* contact-us-in-main-end  */
+.contact-us-in-main-end {
+  width: 35%;
+  height: 35px;
+
+  margin: 50px auto;
+  display: flex;
+}
+.contact-us-in-main-end > button {
+  all: unset;
+  background-color: dodgerblue;
+  color: white;
+  padding: 0 30px;
+  margin-left: 10px;
+}
+.contact-us-in-main-end > input {
+  flex-grow: 1;
+  padding: 0 15px;
+}
+/* main-end */
+/* footer */
+.footer {
+  width: 100%;
+  background-color: black;
+  height: 100px;
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer > i {
+  color: dodgerblue;
+}
